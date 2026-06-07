@@ -5,7 +5,9 @@
   --color-stone: #d8c7aa;
   --color-leaf: #315f4c;
   --color-gold: #b9822b;
+  --color-light-gold: #f1bd52;
   --font-body: Arial, Helvetica, sans-serif;
+  --shadow: 0 4px 6px rgba(31, 37, 32, 0.1), 0 1px 3px rgba(31, 37, 32, 0.06);
 }
 
 * {
