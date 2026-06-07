@@ -1,34 +1,23 @@
 .home-main {
-  position: relative;
   width: 100%;
-  min-height: calc(100vh - 96px);
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-image: url("../../images/angkor-wat-greenery.jpg");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.home-main::before {
-  position: absolute;
-  inset: 0;
-  content: "";
-  background: rgba(18, 18, 18, 0.28);
 }
 
 .hero {
   position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: min(1080px, calc(100% - 40px));
+  width: 100%;
   min-height: calc(100vh - 96px);
-  margin: 0 auto;
-  padding: clamp(72px, 12vh, 144px) 0;
+  margin: 0;
+  padding: clamp(72px, 12vh, 144px) max(20px, calc((100% - 1080px) / 2));
   color: #ffffff;
+  background-image: linear-gradient(rgba(18, 18, 18, 0.28), rgba(18, 18, 18, 0.28)), url("../../images/angkor-wat-greenery.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero h1 {
@@ -48,18 +37,63 @@
   color: #f1bd52;
 }
 
+.home-overview {
+  width: min(1320px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 72px 0 88px;
+  background: var(--color-paper);
+}
+
+.subtitle {
+  text-align:center;
+  margin: 0;
+  color: var(--color-ink);
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.stat-card {
+  background: var(--color-leaf);
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  min-height: 240px;
+  padding: 28px;
+  width: 100%;
+  color: #ffffff;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 20px;
+  max-width: 980px;
+  margin: 32px auto 0;
+}
+
+
+
 @media (max-width: 900px) {
   .hero h1 {
     font-size: 4.4rem;
   }
+
+  .stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 560px) {
-  .hero h1 {
+  .hero h1 { 
     font-size: 3rem;
   }
 
   .hero p {
     font-size: 1rem;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
   }
 }
