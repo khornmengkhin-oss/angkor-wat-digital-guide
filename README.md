@@ -7,6 +7,7 @@ An interactive, multi-page informational website about Khmer heritage, Angkor Wa
 - [Project Overview](#project-overview)
 - [Course Information](#course-information)
 - [Team Members](#team-members)
+- [Team Task Assignment](#team-task-assignment)
 - [Key Features](#key-features)
 - [Page Structure](#page-structure)
 - [Technical Implementation](#technical-implementation)
@@ -36,6 +37,25 @@ The website is designed as a static web project using semantic HTML5, external C
 3. Khorn Mengkhin
 4. Ratha Raksmey
 5. Por Pichpichet
+
+## Team Task Assignment
+
+Each team member is responsible for one main page and the related CSS and JavaScript files for that page. Shared files should be edited carefully because they affect the whole website.
+
+| Team Member | Main Responsibility | Files to Handle |
+| --- | --- | --- |
+| Khorn Mengkhin | Home page and shared website structure | `index.html`, `js/main.js`, `css/global.css`, `css/layout.css`, `css/components.css`, `css/pages/home.css` |
+| Ratha Raksmey | History page | `pages/history.html`, `js/pages/history.js`, `css/pages/history.css` |
+| Lo Sovannara | Architecture page | `pages/architecture.html`, `js/pages/architecture.js`, `css/pages/architecture.css` |
+| Heng Munireach | Gallery page | `pages/gallery.html`, `js/pages/gallery.js`, `css/pages/gallery.css` |
+| Por Pichpichet | Visit planning page | `pages/visit.html`, `js/pages/visit.js`, `css/pages/visit.css` |
+
+### Responsibility Notes
+
+- Khorn Mengkhin should manage the shared files because the home page uses the global layout, navigation, reusable components, and shared JavaScript.
+- Each member should mainly edit their own page's HTML file, page-specific CSS file, and page-specific JavaScript file.
+- If a teammate needs to change shared files such as `css/global.css`, `css/layout.css`, `css/components.css`, or `js/main.js`, they should coordinate with Khorn Mengkhin first.
+- Image, document, font, and video assets can be added by any teammate when needed, but filenames should be clear and organized.
 
 ## Key Features
 
