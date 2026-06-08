@@ -78,7 +78,7 @@
 }
 
 .heritage-feature {
-  display: grid;
+  display: static;
   grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1fr);
   align-items: start;
   gap: clamp(28px, 6vw, 84px);
@@ -111,6 +111,31 @@
   height: auto;
   justify-self: end;
 }
+
+.heritage-de {
+  display: inline-flex;
+}
+
+.heritage-space {
+  margin-right: 70px;
+}
+
+.heritage-image {
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.box-in {
+  background: var(--color-inbox);
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  min-height: 240px;
+  padding: 28px;
+  width: 100%;
+  color: var(--color-muted)
+}
+
 
 @media (max-width: 900px) {
   .hero h1 {
