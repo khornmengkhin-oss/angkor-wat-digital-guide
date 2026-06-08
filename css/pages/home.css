@@ -14,7 +14,7 @@
   margin: 0;
   padding: clamp(72px, 12vh, 144px) max(20px, calc((100% - 1080px) / 2));
   color: #ffffff;
-  background-image: linear-gradient(rgba(18, 18, 18, 0.28), rgba(18, 18, 18, 0.28)), url("../../images/angkor-wat-greenery.jpg");
+  background-image: url("../../images/angkor-wat-greenery.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,19 +85,23 @@
 }
 
 .heritage-logo-space {
-  display: flex;
+  display: grid;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 18px;
   min-height: 240px;
   align-self: start;
+  grid-template-columns: auto 1fr;
+  padding: 60px;
+  background: var(--color-light-stone);
+  border-radius: 12px;
 }
 
 .unesco-logo {
   display: block;
   flex: 0 0 auto;
   width: auto;
-  height: clamp(56px, 6vw, 72px);
+  height: clamp(50px, 4vw, 50px);
 }
 
 .heritage-feature .img-de {
