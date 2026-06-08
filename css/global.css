@@ -1,4 +1,6 @@
 :root {
+  --color-light-stone: #e7dcc7;
+  --color-background: #fffaf0eb;
   --color-ink: #1f2520;
   --color-muted: #667063;
   --color-paper: #f8f4ec;
@@ -7,7 +9,7 @@
   --color-gold: #b9822b;
   --color-light-gold: #f1bd52;
   --font-body: Arial, Helvetica, sans-serif;
-  --shadow: 0 4px 6px rgba(31, 37, 32, 0.1), 0 1px 3px rgba(31, 37, 32, 0.06);
+  --shadow: 0 18px 34px rgba(31, 37, 32, 0.18), 0 6px 14px rgba(31, 37, 32, 0.1);
 }
 
 * {
@@ -17,7 +19,7 @@
 body {
   margin: 0;
   color: var(--color-ink);
-  background: var(--color-paper);
+  background: var(--color-background);
   font-family: var(--font-body);
   line-height: 1.6;
 }

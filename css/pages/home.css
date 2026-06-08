@@ -34,22 +34,22 @@
 }
 
 .hero .eyebrow {
-  color: #f1bd52;
+  color: #f0c367;
 }
 
 .home-overview {
   width: min(1320px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 72px 0 88px;
-  background: var(--color-paper);
+  padding: 50px 0 60px;
 }
 
 .subtitle {
-  text-align:center;
+  text-align: relative;
   margin: 0;
   color: var(--color-ink);
   font-size: 40px;
   font-weight: 700;
+  padding-top: 3px;
 }
 
 .stat-card {
@@ -65,14 +65,48 @@
 
 .stat-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: stretch;
-  gap: 20px;
-  max-width: 980px;
+  gap: 60px;
+  max-width: 1400px;
+  max-height: 500px;
   margin: 32px auto 0;
 }
 
+.stat-grid > * {
+  box-shadow: var(--shadow);
+}
 
+.heritage-feature {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1fr);
+  align-items: start;
+  gap: clamp(28px, 6vw, 84px);
+}
+
+.heritage-logo-space {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 18px;
+  min-height: 240px;
+  align-self: start;
+}
+
+.unesco-logo {
+  display: block;
+  flex: 0 0 auto;
+  width: auto;
+  height: clamp(56px, 6vw, 72px);
+}
+
+.heritage-feature .img-de {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  justify-self: end;
+}
 
 @media (max-width: 900px) {
   .hero h1 {
@@ -81,6 +115,22 @@
 
   .stat-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .heritage-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .heritage-logo-space {
+    min-height: auto;
+  }
+
+  .unesco-logo {
+    height: 64px;
+  }
+
+  .heritage-feature .img-de {
+    justify-self: center;
   }
 }
 
