@@ -1,79 +1,39 @@
+/* this file is for header and navigation layout */
+
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  min-height: 60px;
-  padding: 8px 42px;
-  background: #ffffff;
-  border-bottom: 1px solid rgba(31, 37, 32, 0.1);
-  box-shadow: none;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfd4c0;
 }
 
 .site-logo {
-  display: inline-grid;
-  grid-template-columns: 16px minmax(0, 1fr);
-  align-items: start;
-  gap: 0 9px;
-  width: min(240px, 100%);
-  margin-left: 0;
-  padding: 0;
-  min-width: 0;
-  color: var(--color-leaf);
-  font-family: Georgia, "Times New Roman", serif;
+  color: #1f3f34;
   text-decoration: none;
 }
 
-.site-logo__icon {
-  width: 15px;
-  height: 15px;
-  margin-top: 2px;
-  background: var(--color-light-gold);
-  clip-path: polygon(50% 0, 62% 35%, 100% 50%, 62% 65%, 50% 100%, 38% 65%, 0 50%, 38% 35%);
-}
-
-.site-logo__text {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
 .site-logo__small {
-  color: var(--color-light-gold);
-  font-size: 0.64rem;
-  letter-spacing: 0.36em;
-  line-height: 1;
+  display: block;
+  color: #b27625;
+  font-size: 13px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
 .site-logo__name {
-  color: var(--color-leaf);
-  font-size: 1.42rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.15;
-  text-transform: uppercase;
+  display: block;
+  font-size: 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: bold;
 }
-
-.site-logo__tagline {
-  color: var(--color-gold);
-  font-size: 0.76rem;
-  font-style: italic;
-  letter-spacing: 0.1em;
-  line-height: 1.1;
-}
-
 
 .site-nav {
   display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 27px;
-  max-width: 100%;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .page-shell {
