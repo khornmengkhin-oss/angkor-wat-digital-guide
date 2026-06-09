@@ -1,3 +1,5 @@
+/* this file is only for gallery page */
+
 main p {
-  color: var(--color-muted);
+  color: #555555;
 }
