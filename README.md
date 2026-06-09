@@ -1,26 +1,36 @@
 # Exploring Angkor Wat: A Digital Discovery Guide
 
-An interactive, multi-page informational website about Khmer heritage, Angkor Wat history, temple architecture, visual exploration, and visitor planning.
+A responsive, multi-page digital guide about Angkor Wat, Khmer heritage, temple history, architecture, gallery visuals, and visitor planning.
+
+This project is mainly built with HTML and CSS. A JavaScript folder is also prepared with one empty file for each page, because using JavaScript can give extra points if the team has time to add it later.
 
 ## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Course Information](#course-information)
 - [Team Members](#team-members)
-- [Team Task Assignment](#team-task-assignment)
-- [Key Features](#key-features)
-- [Page Structure](#page-structure)
-- [Technical Implementation](#technical-implementation)
-- [Project Folder Structure](#project-folder-structure)
-- [Getting Started](#getting-started)
-- [Development Notes](#development-notes)
-- [Future Improvements](#future-improvements)
+- [Team Task Division](#team-task-division)
+- [Shared File Rules](#shared-file-rules)
+- [GitHub Team Workflow](#github-team-workflow)
+- [Page Requirements](#page-requirements)
+- [Technical Requirements](#technical-requirements)
+- [Folder Structure](#folder-structure)
+- [How to Run the Project](#how-to-run-the-project)
+- [Final Team Checklist](#final-team-checklist)
 
 ## Project Overview
 
-Exploring Angkor Wat: A Digital Discovery Guide is a responsive, five-page website focused on Cambodia's most iconic Khmer temple. The project combines educational content with interactive website features to help users learn about Angkor Wat's history, architecture, cultural importance, and visitor experience.
+Exploring Angkor Wat: A Digital Discovery Guide is a static website that introduces users to Cambodia's most famous temple complex. The website includes five connected pages:
 
-The website is designed as a static web project using semantic HTML5, external CSS, and JavaScript. Each page shares consistent navigation, visual branding, and responsive layouts for desktop, tablet, and mobile screens.
+1. Home
+2. History
+3. Architecture
+4. Gallery
+5. Visit
+
+The goal is to create a clean educational website with consistent navigation, responsive design, useful content, and organized files. Each team member owns one main page so the work is balanced and easy to manage.
+
+This project uses beginner HTML and CSS ideas from class, including headings, paragraphs, lists, links, images, semantic sections, external CSS, colors, margins, padding, Flexbox, Grid, and media queries.
 
 ## Course Information
 
@@ -38,75 +48,183 @@ The website is designed as a static web project using semantic HTML5, external C
 4. Ratha Raksmey
 5. Por Pichpichet
 
-## Team Task Assignment
+## Team Task Division
 
-Each team member is responsible for one main page and the related CSS and JavaScript files for that page. Shared files should be edited carefully because they affect the whole website.
+Each member is responsible for one page, one page-specific CSS file, and one optional JavaScript file. The JavaScript files are empty for now, so each member can add small extra features later if needed.
 
-| Team Member | Main Responsibility | Files to Handle |
+| Team Member | Page Responsibility | Main Files |
 | --- | --- | --- |
-| Khorn Mengkhin | Home page and shared website structure | `index.html`, `js/main.js`, `css/global.css`, `css/layout.css`, `css/components.css`, `css/pages/home.css` |
-| Ratha Raksmey | History page | `pages/history.html`, `js/pages/history.js`, `css/pages/history.css` |
-| Lo Sovannara | Architecture page | `pages/architecture.html`, `js/pages/architecture.js`, `css/pages/architecture.css` |
-| Heng Munireach | Gallery page | `pages/gallery.html`, `js/pages/gallery.js`, `css/pages/gallery.css` |
-| Por Pichpichet | Visit planning page | `pages/visit.html`, `js/pages/visit.js`, `css/pages/visit.css` |
+| Khorn Mengkhin | Home page and shared website structure | `index.html`, `css/pages/home.css`, `js/home.js`, `css/global.css`, `css/layout.css`, `css/components.css` |
+| Ratha Raksmey | History page | `pages/history.html`, `css/pages/history.css`, `js/history.js` |
+| Lo Sovannara | Architecture page | `pages/architecture.html`, `css/pages/architecture.css`, `js/architecture.js` |
+| Heng Munireach | Gallery page | `pages/gallery.html`, `css/pages/gallery.css`, `js/gallery.js` |
+| Por Pichpichet | Visit planning page | `pages/visit.html`, `css/pages/visit.css`, `js/visit.js` |
 
-### Responsibility Notes
+## Shared File Rules
 
-- Khorn Mengkhin should manage the shared files because the home page uses the global layout, navigation, reusable components, and shared JavaScript.
-- Each member should mainly edit their own page's HTML file, page-specific CSS file, and page-specific JavaScript file.
-- If a teammate needs to change shared files such as `css/global.css`, `css/layout.css`, `css/components.css`, or `js/main.js`, they should coordinate with Khorn Mengkhin first.
-- Image, document, font, and video assets can be added by any teammate when needed, but filenames should be clear and organized.
+Shared files affect every page, so they should be edited carefully.
 
-## Key Features
-
-- Five linked pages covering home, history, architecture, gallery, and visit planning
-- Responsive design for mobile, tablet, and desktop layouts
-- Shared header navigation across all pages
-- Semantic HTML structure using elements such as `header`, `nav`, `main`, `section`, `article`, and `footer`
-- Page-specific CSS files for organized styling
-- JavaScript-powered interactive components planned for timeline tabs, gallery filters, modal previews, route selectors, checklist progress, accordion content, and form validation
-- Visual content support through image, video, font, and document asset folders
-
-## Page Structure
-
-| Page | File | Purpose |
+| File | Purpose | Owner |
 | --- | --- | --- |
-| Home | `index.html` | Landing page with an introduction to Angkor Wat, hero content, key highlights, and links to the main guide sections. |
-| History | `pages/history.html` | Historical timeline page planned to cover Origin, Faith, and Heritage, with milestone data and story cards. |
-| Architecture | `pages/architecture.html` | Architecture explorer planned to highlight towers, galleries, bas-reliefs, moat design, materials, and setting. |
-| Gallery | `pages/gallery.html` | Photo gallery page planned for filterable categories such as Exterior, Details, and Water, with modal image previews. |
-| Visit | `pages/visit.html` | Visitor planning page planned for route selection, checklist progress, etiquette accordion, and a validated contact form. |
+| `css/global.css` | Colors, fonts, base styles, body styles, headings, links, images | Khorn Mengkhin |
+| `css/layout.css` | Header, navigation, page width, spacing, responsive layout structure | Khorn Mengkhin |
+| `css/components.css` | Reusable buttons, cards, labels, grids, and repeated design styles | Khorn Mengkhin |
 
-## Technical Implementation
+Team rules:
 
-### HTML Structure
+- Edit only your assigned HTML page and assigned CSS file unless the team agrees first.
+- Ask Khorn Mengkhin before changing shared CSS files.
+- Use your assigned JavaScript file if you want to add an extra-point feature.
+- Keep JavaScript small and easy to explain.
+- Add only one `<script>` tag for your own page when your JavaScript is ready.
+- Use clear class names that match the page or section purpose.
+- Keep navigation links consistent on all pages.
+- Use descriptive image `alt` text for accessibility.
+- Save images inside the `images/` folder with clear filenames.
+- Write comments in simple English when the section may be confusing.
+- It is okay if two pages repeat some Angkor Wat facts because the topics connect together.
+- Try to write the final paragraph text in your own words.
 
-- Multi-page website with five linked pages
-- Proper HTML5 document structure
-- Semantic page layout for accessibility and readability
-- Image support with descriptive `alt` attributes
-- Planned structured data table for the History page
-- Planned contact form with labels, fieldsets, validation, and error messaging for the Visit page
+## GitHub Team Workflow
 
-### CSS Styling and Layout
+This project can be handled by five members on GitHub.
 
-- Shared global, layout, and component stylesheets
-- Page-specific stylesheets stored in `css/pages/`
-- Responsive layouts using Flexbox and CSS Grid
-- Consistent typography, spacing, buttons, cards, tables, and forms
-- Planned responsive breakpoints for mobile, tablet, and desktop screens
-- Planned transitions and keyframe animations for polished user interactions
+Simple workflow:
 
-### JavaScript Interactivity
+1. Pull the latest code before starting.
+2. Create your own branch, for example `history-page` or `gallery-page`.
+3. Work mostly inside your assigned HTML file and CSS file.
+4. Test by opening `index.html` or using Live Server.
+5. Commit with a simple message, for example `finish history page content`.
+6. Push your branch.
+7. Make a pull request so the team can review before merging.
 
-- Shared navigation behavior in `js/main.js`
-- Page-specific scripts stored in `js/pages/`
-- Planned tabbed timeline for the History page
-- Planned dynamic architecture detail panel
-- Planned gallery filtering and modal preview overlay
-- Planned route selector, checklist progress tracker, accordion, and form validation for the Visit page
+Suggested branch names:
 
-## Project Folder Structure
+- `home-page`
+- `history-page`
+- `architecture-page`
+- `gallery-page`
+- `visit-page`
+
+Do not push broken links or missing images if possible. If you add images from the internet, write down the source or credit.
+
+## Page Requirements
+
+### Home Page
+
+Owner: Khorn Mengkhin  
+Files: `index.html`, `css/pages/home.css`
+
+Optional JavaScript file: `js/home.js`
+
+The home page should introduce the whole website and guide users to the other sections.
+
+Required content:
+
+- Main hero section introducing Angkor Wat
+- Short project introduction
+- Cards or sections linking to History, Architecture, Gallery, and Visit pages
+- Cambodia or Angkor Wat visual identity
+- UNESCO or cultural heritage highlight
+- Shared header and navigation
+
+### History Page
+
+Owner: Ratha Raksmey  
+Files: `pages/history.html`, `css/pages/history.css`
+
+Optional JavaScript file: `js/history.js`
+
+The history page should explain Angkor Wat's background and cultural importance.
+
+Required content:
+
+- Introduction to Angkor Wat's history
+- Construction during the Khmer Empire
+- King Suryavarman II and the original Hindu purpose
+- Later Buddhist use
+- UNESCO World Heritage importance
+- Timeline, article sections, or history cards using HTML and CSS only
+
+### Architecture Page
+
+Owner: Lo Sovannara  
+Files: `pages/architecture.html`, `css/pages/architecture.css`
+
+Optional JavaScript file: `js/architecture.js`
+
+The architecture page should explain the design and structure of Angkor Wat.
+
+Required content:
+
+- Overview of temple layout
+- Central towers and Mount Meru symbolism
+- Moat, causeway, galleries, and courtyards
+- Bas-reliefs and carved details
+- Building materials and design style
+- Diagram-style layout, feature cards, or image sections using HTML and CSS only
+
+### Gallery Page
+
+Owner: Heng Munireach  
+Files: `pages/gallery.html`, `css/pages/gallery.css`
+
+Optional JavaScript file: `js/gallery.js`
+
+The gallery page should visually present Angkor Wat through images and captions.
+
+Required content:
+
+- Image gallery grid
+- Captions for each image
+- Categories such as temple exterior, carvings, sunrise, landscape, or visitor views
+- Consistent image sizing and spacing
+- Image credits if outside sources are used
+- Responsive gallery layout using CSS Grid or Flexbox
+
+### Visit Page
+
+Owner: Por Pichpichet  
+Files: `pages/visit.html`, `css/pages/visit.css`
+
+Optional JavaScript file: `js/visit.js`
+
+The visit page should help users understand how to plan a visit.
+
+Required content:
+
+- Opening hours or best visiting time
+- Location and travel tips
+- Ticket or pass information
+- Suggested route or visitor plan
+- Temple etiquette and respectful behavior
+- Practical tips such as clothing, water, weather, and photography
+- Contact or information section if needed, using HTML form elements only
+
+## Technical Requirements
+
+The website should use:
+
+- HTML5 document structure
+- Semantic elements such as `header`, `nav`, `main`, `section`, `article`, and `footer`
+- External CSS files only
+- Responsive layouts for phone, tablet, and desktop screens
+- Consistent navigation on every page
+- Descriptive `alt` text for all meaningful images
+- Clear headings in logical order
+- Organized class names
+- Optional JavaScript for extra features
+- No broken file links
+
+JavaScript rules:
+
+- Keep one JavaScript file per page.
+- Do not edit another member's JavaScript file without asking.
+- Do not write complicated JavaScript if you cannot explain it.
+- If a page uses JavaScript, link the file before the closing `</body>` tag.
+
+## Folder Structure
 
 ```text
 angkor-wat-digital-guide/
@@ -121,55 +239,63 @@ angkor-wat-digital-guide/
 |       |-- home.css
 |       `-- visit.css
 |-- docs/
+|   `-- course-html-css-notes.md
 |-- fonts/
 |-- images/
-|   |-- Logo.png
-|   `-- angkor-wat-greenery.jpg
+|   |-- Cambodge.png
+|   |-- angkor-wat-greenery.jpg
+|   `-- unesco-seeklogo.png
 |-- js/
-|   |-- main.js
-|   `-- pages/
-|       |-- architecture.js
-|       |-- gallery.js
-|       |-- history.js
-|       `-- visit.js
+|   |-- architecture.js
+|   |-- gallery.js
+|   |-- history.js
+|   |-- home.js
+|   `-- visit.js
 |-- pages/
 |   |-- architecture.html
 |   |-- gallery.html
 |   |-- history.html
 |   `-- visit.html
 |-- videos/
+|-- .gitignore
 |-- index.html
 `-- README.md
 ```
 
-## Getting Started
+## How to Run the Project
 
-No package installation is required because this is a static HTML, CSS, and JavaScript project.
+No installation is required.
 
 1. Open the project folder.
 2. Open `index.html` in a web browser.
-3. Use the navigation menu to move between Home, History, Architecture, Gallery, and Visit pages.
+3. Use the navigation menu to visit each page.
 
-For a smoother local development workflow, open the project in Visual Studio Code and run it with the Live Server extension.
+Recommended development setup:
 
-## Development Notes
+- Open the folder in Visual Studio Code.
+- Use the Live Server extension to preview changes.
+- Refresh the browser after editing HTML or CSS.
 
-- `css/global.css` stores base styles and shared visual rules.
-- `css/layout.css` stores page layout and structural styles.
-- `css/components.css` stores reusable component styles.
-- `css/pages/` stores styles that belong to individual pages.
-- `js/main.js` stores shared JavaScript used across the website.
-- `js/pages/` stores JavaScript for individual pages.
-- `images/` stores image assets such as the logo and Angkor Wat photography.
-- `docs/`, `fonts/`, and `videos/` are reserved for supporting documents, typography files, and multimedia content.
+## Final Team Checklist
 
-## Future Improvements
+Before submission, the team should confirm:
 
-- Add complete final content for all five pages
-- Build the tabbed historical timeline on the History page
-- Build the interactive architecture explorer on the Architecture page
-- Add gallery images, category filters, and modal previews
-- Add visit route planning, checklist progress, etiquette accordion, and form validation
-- Add a branded footer across all pages
-- Add image credits and source documentation
-- Test responsiveness and accessibility across common screen sizes
+- Every page has complete content.
+- Every page is linked correctly in the navigation.
+- Every page uses the shared header style.
+- Every page has its own page-specific CSS file.
+- Every member has one JavaScript file ready.
+- Any JavaScript that gets added is tested and easy to explain.
+- There are no missing image paths.
+- All images have useful `alt` text.
+- Outside image sources are credited if needed.
+- Text is readable on mobile and desktop.
+- CSS is organized and not repeated too much.
+- Spelling and grammar have been checked.
+- The final website opens correctly from `index.html`.
+
+## Notes for Teamwork
+
+To avoid confusion, each person should finish their own page first. After that, the team can review all pages together and adjust spacing, colors, fonts, and navigation so the website feels consistent.
+
+If someone needs to change a shared style, they should tell the team first because that change may affect all five pages.
